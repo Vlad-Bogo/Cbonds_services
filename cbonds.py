@@ -1,7 +1,7 @@
 from datetime import datetime, date
 from CbondsExRates import CbondsApi
 
-quotes = CbondsApi('kalinichevdd@cbr.ru', 'cbonds271020') # Initiate object with login and password passed
+quotes = CbondsApi('*****', '*****') # Initiate object with login and password passed
 quotes.set_api_url('https://ws2.cbonds.info/services/json/get_index_quotes_intraday/') # Provide API data link
 quotes.set_filters([{"field":"date","operator":"eq","value": str(date.today())},
                     {"field":"time","operator":"gt","value":'14:39:00'},
