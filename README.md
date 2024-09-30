@@ -1,8 +1,7 @@
 # Cbonds_services
 The repository contains scripts for the interaction with the API of the Сbonds' web-service in order to obtain financial information of one
 
-CbondsExRates.py is a module containing a python class for requesting the Сbonds' web-service.
-
+CbondsExRates.py is a module containing a python class for requesting the Сbonds' web-service.\\
 Having run directly as main file it returns daily forex rates as at 15:30
 
 
