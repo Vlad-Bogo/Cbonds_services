@@ -89,7 +89,7 @@ class CbondsApi:
             print('No data')
 
 if __name__ == '__main__':
-    web_service = CbondsApi('kalinichevdd@cbr.ru', 'cbonds271020') # Initiate object with login and password passed
+    web_service = CbondsApi('*****', '*****') # Initiate object with login and password passed
     web_service.set_api_url('https://ws2.cbonds.info/services/json/get_index_quotes_intraday/') # Provide API data link
     web_service.set_filters([{"field":"date","operator":"eq","value": str(date.today())},
                    {"field":"time","operator":"gt","value":'15:28:00'},
@@ -126,4 +126,4 @@ if __name__ == '__main__':
         #web_service.save(f'ex_rates_{datetime.now().strftime("%Y%m%d")}.xlsx')  # Optional call for file generating method
         ex_rates['Курс'] = pd.to_numeric(ex_rates['Курс'])
         ex_rates.to_excel(f'ex_rates_{datetime.now().strftime("%Y%m%d")}.xlsx', index=False)
-        print(r"Данные сохранены в C:\Users\bogoslovskiyvd\Documents\Курсы валют\Курсы редких валют\Cbonds")
+        print(r"Данные сохранены")
