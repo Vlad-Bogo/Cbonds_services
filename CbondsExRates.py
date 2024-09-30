@@ -103,7 +103,7 @@ if __name__ == '__main__':
     
     quotes = web_service.execute()  # Call main method for request processing
     if not quotes.empty:
-        FX_types = pd.read_csv('C:\\Users\\bogoslovskiyvd\\Documents\\Курсы валют\\Cbonds\\FX_types.csv', sep=';') # The catalogue of quote types
+        FX_types = pd.read_csv('FX_types.csv', sep=';') # The catalogue of quote types
         FX_info = pd.read_excel('Справочник редких валют.xlsx').rename(columns = {'Букв. код':'Type_rus'})
         quotes.index_id = quotes.index_id.astype(int)
         select_col = quotes.columns.isin(['id', 'updated_at'])
